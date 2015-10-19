@@ -1,5 +1,5 @@
 aptly:
-    build: .
+    image: nmarus/docker-aptly
     container_name: aptly
     hostname: aptly
     restart: always
