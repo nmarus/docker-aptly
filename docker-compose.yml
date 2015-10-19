@@ -1,0 +1,10 @@
+aptly:
+    build: .
+    container_name: aptly
+    hostname: aptly
+    restart: always
+    ports:
+        - "80:80"
+    volumes:
+        - /aptly
+    command: /start.sh
