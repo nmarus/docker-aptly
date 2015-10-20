@@ -19,6 +19,12 @@ init_aptly() {
 
     #create nginx root folder in /aptly
     su -c "mkdir -p /aptly/.aptly/public" aptly
+
+    #copy aptly configuration
+    cp /tmp/.aptly.conf /aptly
+
+    #reset owner on aptly folder
+    chown -R aptly:aptly /aptly
 }
 
 #reset owner on aptly folder

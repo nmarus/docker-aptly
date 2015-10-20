@@ -19,6 +19,9 @@ RUN apt-get -y install aptly git curl bzip2 gnupg gpgv && \
 #setup user aptly
 RUN useradd -M -d /aptly -s /bin/bash aptly --uid 1000
 
+#copy default config for aptly
+COPY .aptly.conf /tmp/.aptly.conf 
+
 #setup nginx
 COPY nginx.conf /etc/nginx/nginx.conf
 
